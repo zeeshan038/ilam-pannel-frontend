@@ -13,7 +13,7 @@ const attendanceApi = baseApi.injectEndpoints({
             invalidatesTags: ["Attendance"],
         }),
         getAttendanceByDate: builder.query({
-            query: (date: string) => ({
+            query: (date: string) => ({ 
                 url: `${attendance_url}/report?date=${date}`,
                 method: "GET",
             }),

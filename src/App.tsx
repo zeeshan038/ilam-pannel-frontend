@@ -5,6 +5,7 @@ import { lazy, Suspense } from 'react'
 
 import logo from './assets/logo.png'
 
+const Home = lazy(() => import('./Home'));
 const Login = lazy(() => import('./features/auth/pages/Login'));
 const AdminSidebar = lazy(() => import('./features/dashboard/sidebar/AdminSidebar'));
 const AdminDashboard = lazy(() => import('./features/dashboard/pages/Dashboard'));
@@ -29,6 +30,7 @@ function App() {
 
         </div>}>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminSidebar />}>
               <Route path="dashboard" element={<AdminDashboard />} />
