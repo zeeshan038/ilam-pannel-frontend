@@ -73,6 +73,7 @@ const FeeManagement = () => {
     });
 
     const { data: analyticsData, isLoading } = useGetAnalyticsQuery({});
+    console.log("analyticsData", analyticsData);
     const { data: allFees, isLoading: allFeesLoading, isError: isFeesError } = useGetAllFeesQuery({
         search: debouncedSearch,
         feeType,
